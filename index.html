@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoCity - Smart Waste Management for SDG 11 Sustainable Cities and Communities">
+  <title>EcoCity | SDG 11 Smart Waste Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo"><span>♻</span> EcoCity</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#sdg11">SDG 11</a>
+      <a href="#guide">Waste Guide</a>
+      <a href="#report">Report</a>
+      <a href="#collection">Collection</a>
+      <a href="#impact">Impact</a>
+    </nav>
+    <a class="nav-cta" href="#report">Get Started</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">SDG 11 • SUSTAINABLE CITIES & COMMUNITIES</span>
+        <h1>Build a cleaner city, <span>one waste item</span> at a time.</h1>
+        <p>EcoCity is a student web application that promotes waste segregation, recycling and citizen reporting to
+          support cleaner, safer and more sustainable communities.</p>
+        <div class="hero-buttons">
+          <a href="#guide" class="btn primary">♻ Explore Waste Guide</a>
+          <a href="#report" class="btn secondary">🗑 Report a Problem</a>
+        </div>
+        <div class="hero-trust">
+          <span>✓ Learn</span><span>✓ Segregate</span><span>✓ Report</span><span>✓ Improve</span>
+        </div>
+      </div>
+      <div class="city-card">
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="city">
+          <div class="building b1"></div>
+          <div class="building b2"></div>
+          <div class="building b3"></div>
+          <div class="building b4"></div>
+          <div class="building b5"></div>
+        </div>
+        <div class="road"></div>
+        <div class="tree t1">🌳</div>
+        <div class="tree t2">🌳</div>
+        <div class="bin">♻️</div>
+        <div class="floating-stat"><strong>75%</strong><small>demo awareness goal</small></div>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <a href="#guide"><span>♻️</span>
+        <div><strong>Segregate</strong><small>Know your waste</small></div>
+      </a>
+      <a href="#report"><span>🗑️</span>
+        <div><strong>Report</strong><small>Flag a waste issue</small></div>
+      </a>
+      <a href="#collection"><span>📍</span>
+        <div><strong>Find</strong><small>Collection points</small></div>
+      </a>
+      <a href="#impact"><span>📊</span>
+        <div><strong>Impact</strong><small>See project stats</small></div>
+      </a>
+    </section>
+
+    <section class="section" id="sdg11">
+      <div class="section-heading">
+        <span class="eyebrow">THE BIGGER PICTURE</span>
+        <h2>What is <span>SDG 11?</span></h2>
+        <p>SDG 11 aims to make cities and human settlements inclusive, safe, resilient and sustainable.</p>
+      </div>
+      <div class="sdg-grid">
+        <article class="feature-card">
+          <div class="icon green">🏙️</div>
+          <h3>Sustainable Cities</h3>
+          <p>Use resources responsibly and reduce the environmental impact of urban life.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon blue">♿</div>
+          <h3>Inclusive Communities</h3>
+          <p>Urban services and public spaces should be accessible and useful for everyone.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon orange">🛡️</div>
+          <h3>Resilient Cities</h3>
+          <p>Communities should be better prepared for environmental and other urban challenges.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section light" id="guide">
+      <div class="section-heading">
+        <span class="eyebrow">INTERACTIVE WASTE GUIDE</span>
+        <h2>Know your <span>waste.</span></h2>
+        <p>Choose an item and learn which waste category it belongs to. This is a learning demonstration for the
+          project.</p>
+      </div>
+      <div class="guide-box">
+        <div class="item-display">
+          <div id="itemEmoji">🥤</div>
+          <h3 id="itemName">Plastic Bottle</h3>
+          <p id="itemHint">Where should it go?</p>
+          <div class="item-buttons">
+            <button class="category-btn" data-answer="wet">🟢 Wet</button>
+            <button class="category-btn" data-answer="dry">🔵 Dry / Recyclable</button>
+            <button class="category-btn" data-answer="hazardous">🔴 Hazardous</button>
+            <button class="category-btn" data-answer="residual">⚫ Residual</button>
+          </div>
+          <div id="quizResult" class="quiz-result"></div>
+          <button id="nextItem" class="btn primary hidden">Next Item →</button>
+        </div>
+        <div class="category-list">
+          <div><b>🟢 Wet Waste</b><span>Food scraps, vegetable peels, garden waste</span></div>
+          <div><b>🔵 Dry / Recyclable</b><span>Paper, cardboard, many plastics, metals</span></div>
+          <div><b>🔴 Hazardous</b><span>Batteries, chemicals and specially handled waste</span></div>
+          <div><b>⚫ Residual</b><span>Waste that cannot reasonably be recovered through local systems</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="report">
+      <div class="section-heading">
+        <span class="eyebrow">CITIZEN ACTION</span>
+        <h2>Report a waste <span>problem.</span></h2>
+        <p>Help identify waste issues in your community. This front-end form demonstrates validation and submission
+          feedback.</p>
+      </div>
+      <div class="report-layout">
+        <form id="reportForm" class="form-card">
+          <div class="form-row">
+            <label>Name<input type="text" id="name" placeholder="Your name" required></label>
+            <label>Email<input type="email" id="email" placeholder="you@example.com" required></label>
+          </div>
+          <label>Location<input type="text" id="location" placeholder="Area / landmark" required></label>
+          <label>Waste type
+            <select id="wasteType" required>
+              <option value="">Select a category</option>
+              <option>Wet waste</option>
+              <option>Dry / recyclable</option>
+              <option>Hazardous waste</option>
+              <option>Residual waste</option>
+              <option>Mixed / unknown</option>
+            </select>
+          </label>
+          <label>Problem description<textarea id="description" rows="4" placeholder="Describe the issue..."
+              required></textarea></label>
+          <label>Photo (optional)<input type="file" id="photo" accept="image/*"></label>
+          <button class="btn primary" type="submit">Submit Report →</button>
+          <div id="formMessage" class="form-message"></div>
+        </form>
+        <div class="report-info">
+          <div class="info-card"><span>01</span>
+            <h3>Spot it</h3>
+            <p>Notice overflowing bins, littering or an unmanaged waste area.</p>
+          </div>
+          <div class="info-card"><span>02</span>
+            <h3>Report it</h3>
+            <p>Enter the location and describe the issue through the form.</p>
+          </div>
+          <div class="info-card"><span>03</span>
+            <h3>Improve it</h3>
+            <p>Use the information to encourage better community action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="collection">
+      <div class="section-heading">
+        <span class="eyebrow">FIND A PLACE</span>
+        <h2>Collection <span>points.</span></h2>
+        <p>Demo collection-point data for the WAD project. Replace these entries with verified local information before
+          real-world use.</p>
+      </div>
+      <div class="search-wrap"><input id="pointSearch" type="search" placeholder="🔎 Search by name or waste type...">
+      </div>
+      <div class="points-grid" id="pointsGrid">
+        <article class="point-card" data-search="community recycling center dry plastic paper">
+          <span class="point-icon">♻️</span>
+          <h3>Community Recycling Center</h3>
+          <p>Dry waste • Paper • Plastic • Metal</p><small>🕘 9:00 AM – 6:00 PM</small><button class="text-btn">View
+            location →</button>
+        </article>
+        <article class="point-card" data-search="e waste collection batteries electronics hazardous">
+          <span class="point-icon">🔋</span>
+          <h3>E-Waste Collection Point</h3>
+          <p>Electronics • Batteries • E-waste</p><small>🕘 10:00 AM – 5:00 PM</small><button class="text-btn">View
+            location →</button>
+        </article>
+        <article class="point-card" data-search="plastic collection dry recyclable">
+          <span class="point-icon">🥤</span>
+          <h3>Plastic Collection Point</h3>
+          <p>Clean plastic packaging • Bottles</p><small>🕘 8:00 AM – 7:00 PM</small><button class="text-btn">View
+            location →</button>
+        </article>
+      </div>
+      <p id="noPoints" class="empty hidden">No matching collection point found.</p>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="section-heading">
+        <span class="eyebrow">PROJECT DASHBOARD</span>
+        <h2>Small actions, <span>big impact.</span></h2>
+        <p>These numbers are demonstration statistics for the college project, not live municipal data.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><strong class="counter" data-target="1250">0</strong><span>Demo reports</span></div>
+        <div class="stat-card"><strong class="counter" data-target="850">0</strong><span>Issues resolved</span></div>
+        <div class="stat-card"><strong class="counter" data-target="620">0</strong><span>Recycling actions</span></div>
+        <div class="stat-card"><strong class="counter" data-target="75">0</strong><span>Awareness goal %</span></div>
+      </div>
+      <div class="steps">
+        <div><b>01</b>
+          <h3>Reduce</h3>
+          <p>Choose products with less unnecessary packaging.</p>
+        </div>
+        <div><b>02</b>
+          <h3>Reuse</h3>
+          <p>Give useful items a longer life whenever possible.</p>
+        </div>
+        <div><b>03</b>
+          <h3>Segregate</h3>
+          <p>Separate waste at the point where it is generated.</p>
+        </div>
+        <div><b>04</b>
+          <h3>Recycle</h3>
+          <p>Send suitable materials into the appropriate recycling stream.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div><span class="eyebrow">YOUR CITY NEEDS YOU</span>
+        <h2>Be the change. Start today.</h2>
+        <p>Learn one thing, change one habit and encourage one more person.</p>
+      </div>
+      <a href="#report" class="btn white">Report a Waste Problem →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div><a href="#home" class="logo footer-logo"><span>♻</span> EcoCity</a>
+        <p>Smart Waste Management for SDG 11.</p>
+      </div>
+      <div>
+        <h4>Explore</h4><a href="#sdg11">SDG 11</a><a href="#guide">Waste Guide</a><a href="#impact">Impact</a>
+      </div>
+      <div>
+        <h4>Take Action</h4><a href="#report">Report Waste</a><a href="#collection">Collection Points</a><a
+          href="#guide">Recycling Tips</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 EcoCity • WAD Academic Project • SDG 11</div>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
+Bhai kal web ka viva hai aur i am just at zero aisa samaj aur kal ke viva ke liye prepare kar aur samja using real world examples and application 
